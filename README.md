@@ -1,4 +1,4 @@
-# midi
+# Robbie Bobbie's Midi Library
 Sup nerds,
 
 This is a homemade MIDI python library (still in production).
