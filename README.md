@@ -8,4 +8,4 @@ The goal is to create layers of abstraction
 
 MIDI File -> Tracks -> Event objects
 
-The Midi File objects init will take a file location and immediatly start the decompression process and output a MidiFile object.
+The readMidiFile() function will take a file location and immediatly start the decompression process and output a MidiFile object.
