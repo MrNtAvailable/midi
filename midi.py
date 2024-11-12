@@ -2,7 +2,7 @@ import struct
 
 
 class Event():
-    def __init__(self, delta, typeEvent):
+    def __init__(self, delta: int, typeEvent: string):
         self.delta = delta
         self.type = typeEvent
 
@@ -15,7 +15,7 @@ class Event():
 #Other Event Definitions go here
 
 class TextEvent(Event):
-        def __init__(self, delta, text, typeOf):
+        def __init__(self, delta, text, typeOf: string):
             super().__init__(delta, typeOf)
             self.text = text
 
@@ -128,7 +128,7 @@ def variableLength(f):  #Variable length data is stored in byte chuncks with the
                 if delta_in[0] == 0: #Checks to see if continuation bit, byte[0], is 0, therefore break
                     return int(delta, base=2) #Translates to integer
 
-def readFile(fileName):
+def readMidiFile(fileName):
     file = MidiFile(fileName)   #Creates MidiFile Object
     tracksCount = 0         #Tracks how many tracks have been parsed
     with file.getFile() as f: 
